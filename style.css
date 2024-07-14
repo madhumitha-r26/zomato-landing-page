@@ -277,6 +277,7 @@ font-size: 2rem;;
 .right .input_container{
     display: flex;
     gap:0.5rem;
+    flex-wrap: wrap;
 }
 
 .input_container button, .input_container input{
