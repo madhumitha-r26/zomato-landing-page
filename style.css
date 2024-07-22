@@ -41,6 +41,7 @@ border-radius: 100%;
 border:solid white 2px;
 display:none;
 }
+
 .hero__section_container{
     display:flex;
     flex-direction: column;
@@ -212,7 +213,7 @@ outline: none;
 }
 
 .get_the_app{
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -221,11 +222,10 @@ outline: none;
 }
 
 .get_the_app .semicontainer{
-    display: flex;
     width:60%;
     justify-content: center;
     flex-wrap: wrap;
-    gap:1.5rem;
+    gap:1rem;
 }
 
 .get_the_app .semicontainer .left{
@@ -234,15 +234,14 @@ outline: none;
 
 .get_the_app .semicontainer .left img{
     width:100%;
-    object-fit: cover;
+    object-fit:cover;
     object-position: center;
 }
 
 .get_the_app .semicontainer .right{
     flex:3;
     height:100%;
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap:1rem;
 }
 
@@ -277,7 +276,6 @@ font-size: 2rem;;
 .right .input_container{
     display: flex;
     gap:0.5rem;
-    flex-wrap: wrap;
 }
 
 .input_container button, .input_container input{
@@ -309,6 +307,8 @@ font-size: 2rem;;
 .right .download_app_container h5{
     font-weight: 400;
     color: gray;
+    outline:none;
+    border-radius: 5px;
 }
 
 
@@ -320,6 +320,105 @@ font-size: 2rem;;
 .right .download_app_container div img{
     width: 35%;
 }
+
+.footer{
+    width: 100%;
+}
+
+.footer_section1{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+width:80%;
+margin:auto;
+}
+
+.footer_section1 img{
+    width: 130px;
+}
+
+.section1_buttonContainer{
+    display: flex;
+    gap: 1rem;
+}
+
+.section1_buttonContainer button{
+    padding: 5px;
+    width:90px;
+    border-radius: 5px;
+    border:1px solid gray;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:12px;
+    cursor: pointer;
+}
+
+.navigation_container{
+display: grid;
+grid-template-columns: repeat(5,1fr);
+width: 80%;
+margin: auto;
+gap:1rem;
+padding:3rem 0;
+}
+
+.link__container{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.link__container h5{
+font-weight: 500;
+font-size: 15px;
+margin-bottom: 5px;
+letter-spacing: 0.8px;
+}
+
+.footer__link{
+    text-decoration: none;
+    color: gray;
+    font-size: 12.5px;
+    font-weight: 300;
+}
+
+.footer__link:hover{
+    color: black;
+}
+
+.section__links_container button{
+    background-color: black;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+}
+
+.section__links_container button i{
+    color: white;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__section__logos{
+    width: 100%;
+}
+
+.disclaimer{
+    width: 95%;
+    color: gray;
+    margin: auto;
+    border-top: 1px solid gray;
+    padding-top: 1.5rem;
+}
+
+
+
 
 
 /* mobile screen */
@@ -352,4 +451,44 @@ font-size: 2rem;;
         width:95%;
     }
 
+}
+
+@media only screen and (min-width: 1200px) {
+    .get_the_app .semicontainer {
+      display: flex;
+    }
+    .get_the_app .semicontainer .left,
+    .get_the_app .semicontainer .right {
+      flex: 1;
+    }
+
+    
+  }
+
+@media only screen and (max-width:1300px){
+   .get_the_app .semicontainer .left,
+    .get_the_app .semicontainer .right{
+        flex:1;
+    } 
+    .get_the_app .semicontainer{
+        width: 80%;
+    }
+ 
+}
+
+@media only screen and (max-width:900px) {
+    .get_the_app{
+        padding: 2rem  0;
+    }
+
+    .get_the_app .semicontainer{
+        width: 95%;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .navigation_container{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
